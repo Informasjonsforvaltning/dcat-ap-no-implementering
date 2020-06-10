@@ -5,8 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<meta name="description" content="Mal for bruk til nye spesifikasjoner som er laga i asciidoc.">
-<title>Spesifikasjonsmal</title>
+<meta name="description" content="Normative beskrivelser av feltene i DCAT-AP-NO">
+<meta name="author" content="v1.0">
+<title>Støtte til teknisk implementering av DCAT-AP-NO</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,12 +441,81 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Spesifikasjonsmal</h1>
+<h1>Støtte til teknisk implementering av DCAT-AP-NO</h1>
+<div class="details">
+<span id="author" class="author">v1.0</span><br>
+</div>
 <div id="toc" class="toc2">
 <div id="toctitle">Innholdsfortegnelse</div>
 <ul class="sectlevel1">
-<li><a href="#_forord">Forord</a></li>
-<li><a href="#_kapittel_1">Kapittel 1</a></li>
+<li><a href="#_felter_som_er_maskingenerert">Felter som er maskingenerert</a>
+<ul class="sectlevel2">
+<li><a href="#_identifikator_for_datasett">Identifikator for datasett</a></li>
+</ul>
+</li>
+<li><a href="#_navnerom">Navnerom</a></li>
+<li><a href="#_katalog">Katalog:</a>
+<ul class="sectlevel2">
+<li><a href="#_utgiver_eier_av_katalog">Utgiver (Eier av katalog)</a></li>
+<li><a href="#_datasett">Datasett</a></li>
+<li><a href="#_utgivelsesdato_utgivelse">Utgivelsesdato (Utgivelse)</a></li>
+<li><a href="#_endringsdato_sist_oppdatert">Endringsdato (Sist oppdatert)</a></li>
+</ul>
+</li>
+<li><a href="#_datasett_2">Datasett:</a>
+<ul class="sectlevel2">
+<li><a href="#_tittel">Tittel</a></li>
+<li><a href="#_beskrivelse">Beskrivelse</a></li>
+<li><a href="#_identifikator">Identifikator</a></li>
+<li><a href="#_tema">Tema</a></li>
+<li><a href="#_utgiver_eier">Utgiver (Eier)</a></li>
+<li><a href="#_kontaktpunkt">Kontaktpunkt</a></li>
+<li><a href="#_datasettdistribusjon">Datasettdistribusjon</a></li>
+<li><a href="#_emneord_søkeord">Emneord (Søkeord)</a></li>
+<li><a href="#_tilgangsnivå">Tilgangsnivå</a></li>
+<li><a href="#_skjermingshjemmel">Skjermingshjemmel</a></li>
+<li><a href="#_begrep">Begrep</a></li>
+<li><a href="#_i_samsvar_med">I samsvar med</a></li>
+<li><a href="#_dokumentasjon">Dokumentasjon</a></li>
+<li><a href="#_frekvens">Frekvens</a></li>
+<li><a href="#_er_versjon_av">Er versjon av</a></li>
+<li><a href="#_er_del_av">Er del av</a></li>
+<li><a href="#_er_versjon_av_2">Er versjon av</a></li>
+<li><a href="#_erstattet_av">Erstattet av</a></li>
+<li><a href="#_krever">Krever</a></li>
+<li><a href="#_relatert">Relatert</a></li>
+<li><a href="#_kilde">Kilde</a></li>
+<li><a href="#_opphav">Opphav</a></li>
+<li><a href="#_landingsside">Landingsside</a></li>
+<li><a href="#_språk">Språk</a></li>
+<li><a href="#_testdatasett">Testdatasett*</a></li>
+<li><a href="#_dekningsområde">Dekningsområde</a></li>
+<li><a href="#_tidsrom_tidsmessig_avgrensing">Tidsrom (Tidsmessig avgrensing)</a></li>
+<li><a href="#_type">Type</a></li>
+<li><a href="#_endringsdato_modifisert">Endringsdato (modifisert)</a></li>
+<li><a href="#_skaper">Skaper</a></li>
+</ul>
+</li>
+<li><a href="#_distribusjon">Distribusjon:</a>
+<ul class="sectlevel2">
+<li><a href="#_tilgangsurl">TilgangsURL</a></li>
+<li><a href="#_beskrivelse_2">Beskrivelse</a></li>
+<li><a href="#_format">Format</a></li>
+<li><a href="#_dokumentasjon_2">Dokumentasjon</a></li>
+<li><a href="#_nedlastingslenke">Nedlastingslenke</a></li>
+<li><a href="#_i_samsvar_med_2">I samsvar med</a></li>
+<li><a href="#_utgivelsesdato_utgivelse_2">Utgivelsesdato (Utgivelse)</a></li>
+<li><a href="#_tittel_2">Tittel</a></li>
+<li><a href="#_endringsdato_sist_oppdatert_2">Endringsdato (Sist oppdatert)</a></li>
+</ul>
+</li>
+<li><a href="#_enhet">Enhet:</a>
+<ul class="sectlevel2">
+<li><a href="#_navn_enhetsnavn">Navn (Enhetsnavn)</a></li>
+<li><a href="#_utgivertype">Utgivertype</a></li>
+<li><a href="#_organisasjonsidentifikator_organisasjonsnummer">Organisasjonsidentifikator (Organisasjonsnummer)</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -458,19 +528,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>Publisert: 2020-03-05</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Advarsel"></i>
-</td>
-<td class="content">
-Dette er mal-dokument for andre spesifikasjoner.
-</td>
-</tr>
-</table>
+<p>Normative beskrivelser av feltene i DCAT-AP-NO</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -485,27 +543,710 @@ Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangl
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Merk"></i>
+</td>
+<td class="content">
+Ikke alle egenskapene i standarden er beskrevet her. Titlene på feltene i dette dokumentet samsvarer med egenskapsnavnene i <a href="https://doc.difi.no/dcat-ap-no/">DCAT-AP-NO v1.1</a>. Titler i parentes er brukt i registreringsløsningen for <a href="https://fellesdatakatalog.brreg.no/">Felles datakatalog</a> . Felter i registreringsingsløsningen som ikke er del av standarden er merket med * .  Gapet mellom standard og løsning når det gjelder navngiving av felter er forventet løst i en snarlig revisjon av standarden.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_forord"><a class="anchor" href="#_forord"></a>Forord</h2>
+<h2 id="_felter_som_er_maskingenerert"><a class="anchor" href="#_felter_som_er_maskingenerert"></a>Felter som er maskingenerert</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_identifikator_for_datasett"><a class="anchor" href="#_identifikator_for_datasett"></a>Identifikator for datasett</h3>
 <div class="paragraph">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non augue dapibus, mollis odio vel, efficitur orci. Aenean venenatis orci a porta cursus. Suspendisse at commodo nulla, et sagittis neque. Maecenas pulvinar tellus vel tellus ultricies, sit amet tristique ex faucibus. Fusce sapien tellus, accumsan nec justo in, lobortis varius purus. Curabitur non libero lectus. Praesent accumsan quam sit amet luctus lobortis. Pellentesque augue dui, congue et felis eget, scelerisque porta enim. Proin iaculis placerat tincidunt. Cras nec gravida elit.</p>
+<p>For å kunne referere til et datasett entydig og kunne angi relasjoner mellom datasett, må alle datasett ha stabile, globale og unike identifikatorer. Identifikator er et obligatorisk felt.</p>
 </div>
-<div class="paragraph">
-<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla id leo ac est condimentum tempus. Duis maximus tortor nec porttitor tincidunt. Donec eu mi sed libero pharetra semper quis in ex. Nunc mattis vitae libero eu rhoncus. Nam mattis magna ac tincidunt feugiat. Nulla ullamcorper, sem non volutpat varius, felis quam rhoncus massa, vitae pellentesque odio ligula a metus. Vestibulum commodo lacus eu odio posuere pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Identifikatoren bør automatisk genereres når du registrerer datasettet om du benytter en registreringsløsning.</p>
+</li>
+<li>
+<p>Identifikatoren skal være unik innenfor aktuell datakatalog</p>
+</li>
+<li>
+<p>Identifikatoren skal inngå i en globalt unik identifikator.</p>
+</li>
+<li>
+<p>Den globalt unike identifikatoren skal utformes som en URI</p>
+</li>
+<li>
+<p>Den globalt unike identifikatoren er representert ved feltet dct:identifier</p>
+</li>
+<li>
+<p>Datasettets URI bør benytte en av de globalt unike identifikatorene i dct:identifier</p>
+</li>
+<li>
+<p>Man bør kunne registrere ytterligere identifikatorer.</p>
+</li>
+</ul>
+</div>
+<div class="ulist checklist">
+<div class="title">Eksempler</div>
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> “http://data.brreg.no/datakatalog/datasett/12”</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;http://data.brreg.no/datakatalog/datasett/12&gt;
+   dct:identifier “http://data.brreg.no/datakatalog/datasett/12” ;
+   adms:identifier &lt;http://data.brreg.no/datakatalog/identifikator/111&gt; ;
+   owl:sameAs &lt;http://datakatalog.hdir.no/datasett/2.16.528.1.12.1.1.7110&gt; .
+
+# identifikatoren for datasettet innenfor Helsedirektoratet
+&lt;http://data.brreg.no/datakatalog/identifikator/111&gt;
+   a adms:Identifier ;
+   skos:notation “OID 2.16.578.1.12.4.1.1.7110” ;
+   dct:creator &lt;http://data.brreg.no/enhetsregisteret/enhet/983544622&gt; #helsedir
+   .</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_kapittel_1"><a class="anchor" href="#_kapittel_1"></a>Kapittel 1</h2>
+<h2 id="_navnerom"><a class="anchor" href="#_navnerom"></a>Navnerom</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Etiam tempus neque porttitor enim congue, vel dictum odio aliquet. Sed massa lectus, pretium nec erat in, facilisis tincidunt lorem. Phasellus ut elit ut nibh aliquet sollicitudin a in elit. Duis dolor ligula, gravida ac eros sit amet, congue ultrices lacus. Curabitur ut tincidunt ipsum, ut aliquam ipsum. Phasellus vel elit eros. Duis pellentesque risus non sollicitudin bibendum. Donec ultrices mi lectus, id feugiat leo hendrerit a. Pellentesque in urna a elit cursus consectetur in et lacus. In hac habitasse platea dictumst. Cras scelerisque, nisl in dapibus malesuada, justo risus ornare sapien, a sagittis massa enim ut nisi. Ut varius augue justo, vel efficitur ipsum suscipit sed. Duis sollicitudin lobortis ligula sit amet sagittis.</p>
+<div class="listingblock">
+<div class="content">
+<pre>@prefix dct: &lt;&gt; . # dublin core terms
+@prefix rdfs: &lt;&gt; . # rdf schema
+@prefix owl: &lt;&gt; . # web ontology language
+@prefix dcat: &lt;&gt; . # data catalog vocabulary
+@prefix adms: &lt;&gt; . # asset description metadata schema
+@prefix dcatno: &lt;&gt; . # data catalog norwegian extension
+
+@prefix ot: &lt;&gt; .
+@prefix iso: &lt;&gt; .</pre>
 </div>
-<div class="paragraph">
-<p>Vivamus elit massa, tempus vel bibendum non, fringilla sed ex. Mauris euismod neque et quam convallis gravida. Donec molestie nulla eget arcu molestie, et interdum neque auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec nec massa vel mauris pellentesque sollicitudin quis ut ante. Nulla malesuada pharetra ex, sit amet tincidunt mi dapibus ut. Aliquam erat volutpat. Sed sed quam sapien. Sed eu iaculis lacus, maximus interdum dolor.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_katalog"><a class="anchor" href="#_katalog"></a>Katalog:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_utgiver_eier_av_katalog"><a class="anchor" href="#_utgiver_eier_av_katalog"></a>Utgiver (Eier av katalog)</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:publisher a owl:ObjectProperty ;
+     rdfs:domain dcat:Catalog ;
+     rdfs:range foaf:Organization .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datasett"><a class="anchor" href="#_datasett"></a>Datasett</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dcat:dataset a owl:ObjectProperty ;
+            rdfs:label “datasett”@no ; # norsk oversettelse
+            rdfs:domain dcat:Catalog ;
+            rdfs:range dcat:Dataset .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utgivelsesdato_utgivelse"><a class="anchor" href="#_utgivelsesdato_utgivelse"></a>Utgivelsesdato (Utgivelse)</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:issued a owl:ObjectProperty ;
+   rdfs:label “distribusjonsdato”@no ;
+   rdfs:domain dcat:Catalog ;
+   rdfs:range xsd:DateTime .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_endringsdato_sist_oppdatert"><a class="anchor" href="#_endringsdato_sist_oppdatert"></a>Endringsdato (Sist oppdatert)</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:modified a owl:DatatypeProperty ;
+     rdfs:domain dcat:Catalog ;
+     rdfs:range xsd:DateTime .</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_datasett_2"><a class="anchor" href="#_datasett_2"></a>Datasett:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_tittel"><a class="anchor" href="#_tittel"></a>Tittel</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:title a owl:DatatypeProperty ;
+            rdfs:label “tittel”@no ; # norsk oversettelse
+            rdfs:domain dcat:Dataset ;
+            rdfs:range rdfs:Literal .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beskrivelse"><a class="anchor" href="#_beskrivelse"></a>Beskrivelse</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:description a owl:DatatypeProperty ;
+            rdfs:label “beskrivelse”@nb ; # norsk oversettelse
+            rdfs:domain dcat:Dataset ;
+            rdfs:range rdfs:Literal .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_identifikator"><a class="anchor" href="#_identifikator"></a>Identifikator</h3>
+<div class="listingblock">
+<div class="content">
+<pre># identifikatoren angis med dct:identifier som en streng
+dct:identifier a owl:DatatypeProperty ;
+     rdfs:domain dcat:Dataset ;
+     rdfs:range xsd:String .
+
+# alternativ identifikator angis som et objekt med adms:identifier
+adms:identifier a owl:ObjectProperty ;
+     rdfs:domain dcat:Dataset ;
+     rdfs:range adms:Identifier ;
+
+adms:Identifier a owl:Class .
+
+# bruk skos:notation til å angi denne identifikatoren som en literal
+skos:notation a owl:DatatypeProperty
+     rdfs:domain adms:Identifier ;
+     rdfs:range rdfs:Literal .
+
+# og angi organisasjonen som er autoritet for identifikatoren
+dcterms:creator a owl:ObjectProperty ;
+     rdfs:domain adms:Identifier ;
+     rdfs:range foaf:Organization .
+
+# rdfs:seeAlso brukes til å angi relasjoner til et identisk datasett, men som kan ha sin egen beskrivelse.
+rdfs:seeAlso a owl:ObjectProperty ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range dcat:Dataset .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tema"><a class="anchor" href="#_tema"></a>Tema</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:subject a owl:ObjectProperty ;
+     rdfs:domain dcat:Dataset ;
+     # listen hentes fra egen begrepskatalog beskrevet i SKOS
+     rdfs:range skos:Concept .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utgiver_eier"><a class="anchor" href="#_utgiver_eier"></a>Utgiver (Eier)</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:publisher a owl:ObjectProperty ;
+     rdfs:domain dcat:Dataset ;
+     rdfs:range foaf:Organization .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kontaktpunkt"><a class="anchor" href="#_kontaktpunkt"></a>Kontaktpunkt</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dcat:contactPoint a owl:ObjectProperty ;
+     rdfs:domain dcat:Dataset ;
+     rdfs:range vcard:Organization .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datasettdistribusjon"><a class="anchor" href="#_datasettdistribusjon"></a>Datasettdistribusjon</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dcat:distribution a owl:ObjectProperty ;
+  rdfs:label “datasettdistribusjon”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Distribution .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_emneord_søkeord"><a class="anchor" href="#_emneord_søkeord"></a>Emneord (Søkeord)</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dcat:keyword a owl:DatatypeProperty ;
+     rdfs:domain dcat:Dataset ;
+     rdfs:range rdfs:Literal .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tilgangsnivå"><a class="anchor" href="#_tilgangsnivå"></a>Tilgangsnivå</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:accessRights a owl:ObjectProperty ;
+  rdfs:label “Tilgangsnivå”@no . # ledetekst på norsk
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dct:RightsStatement .
+
+dct:RightsStatement a owl:Class . # Peker på eu publication office verdier http://publications.europa.eu/mdr/authority/access-right/index.html
+
+# kodelisten (første innslag)
+&lt;http://publications.europa.eu/resource/authority/access-right/PUBLIC&gt;
+   a skos:Concept ;
+   skos:inScheme &lt;http://publications.europa.eu/resource/authority/access-right&gt;;
+   dct:identifier “Public” ;
+   skos:prefLabel “Offentlig”@no .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_skjermingshjemmel"><a class="anchor" href="#_skjermingshjemmel"></a>Skjermingshjemmel</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dcatno:accessRightsComment a owl:DatatypeProperty;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range skos:Concept .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_begrep"><a class="anchor" href="#_begrep"></a>Begrep</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:subject a owl:ObjectProperty ;
+     rdfs:domain dcat:Dataset ;
+     # listen hentes fra egen begrepskatalog beskrevet i SKOS
+     rdfs:range skos:Concept .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_i_samsvar_med"><a class="anchor" href="#_i_samsvar_med"></a>I samsvar med</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:conformsTo a owl:ObjectProperty;
+  rdfs:label “i samsvar med standard”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dct:Standard . # kan lenke til ethvert dokument</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dokumentasjon"><a class="anchor" href="#_dokumentasjon"></a>Dokumentasjon</h3>
+<div class="listingblock">
+<div class="content">
+<pre>foaf:page a owl:ObjectProperty ;
+     rdfs:domain dcat:Dataset ;
+     rdfs:range foaf:Document .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_frekvens"><a class="anchor" href="#_frekvens"></a>Frekvens</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:accrualPeriodicity a owl:ObjectProperty;
+  rdfs:label “innholdsspesifikasjon”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dct:Frequency . # Skal peke på Frequency Name Authority List som vedlikeholdes av Publications Office.</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_er_versjon_av"><a class="anchor" href="#_er_versjon_av"></a>Er versjon av</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:isVersionOf a owl:ObjectProperty ;
+  rdfs:label “versjon av”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Dataset .
+
+dcat:hasVersion a owl:ObjectProperty ;
+  owl:inversePropertyOf dcat:versionOf ;
+  rdfs:label “har versjon”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Dataset .
+
+adms:versionNotes a owl:DatatypeProperty ;
+  rdfs:label “versjonsnote”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range rdfs:Literal .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_er_del_av"><a class="anchor" href="#_er_del_av"></a>Er del av</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:isPartOf a owl:ObjectProperty ;
+  rdfs:label “er del av”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Dataset .
+
+dcat:hasPart a owl:ObjectProperty ;
+  owl:inversePropertyOf dcat:partOf ;
+  rdfs:label “har del”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Dataset .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_er_versjon_av_2"><a class="anchor" href="#_er_versjon_av_2"></a>Er versjon av</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:isVersionOf a owl:ObjectProperty ;
+  rdfs:label “versjon av”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Dataset .
+
+dcat:hasVersion a owl:ObjectProperty ;
+  owl:inversePropertyOf dcat:versionOf ;
+  rdfs:label “har versjon”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Dataset .
+
+adms:versionNotes a owl:DatatypeProperty ;
+  rdfs:label “versjonsnote”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range rdfs:Literal .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erstattet_av"><a class="anchor" href="#_erstattet_av"></a>Erstattet av</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:isReplacedBy a owl:ObjectProperty ;
+  rdfs:label “erstattet av”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Dataset .
+
+dcat:hasReplaced a owl:ObjectProperty;
+  owl:inversePropertyOf dcat:replacedBy ;
+  rdfs:label “har erstattet”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Dataset .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_krever"><a class="anchor" href="#_krever"></a>Krever</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:requires a owl:ObjectProperty ;
+  rdfs:label “krever” ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Dataset .
+
+dct:isRequiredBy a owl:ObjectProperty ;
+  owl:inversePropertyOf dcat:requires ;
+  rdfs:label “er påkrevd av”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Dataset .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_relatert"><a class="anchor" href="#_relatert"></a>Relatert</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:relation a owl:ObjectProperty ;
+  rdfs:label “relatert”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Dataset .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kilde"><a class="anchor" href="#_kilde"></a>Kilde</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dcat:source a owl:ObjectProperty ;
+  rdfs:label “kilde”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range rdfs:Resource . # kan være en hvilken som helst URI inkl. et datasett</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_opphav"><a class="anchor" href="#_opphav"></a>Opphav</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:provenance a owl:ObjectProperty;
+  rdfs:label “opphav”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dct:ProvenanceStatement .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_landingsside"><a class="anchor" href="#_landingsside"></a>Landingsside</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dcat:landingPage a owl:ObjectProperty ;
+     rdfs:domain dcat:Dataset ;
+     rdfs:range foaf:Document .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_språk"><a class="anchor" href="#_språk"></a>Språk</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:language a owl:ObjectProperty ;
+     rdfs:domain dcat:Dataset ;
+     rdfs:range dct:LinguisticSystem .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_testdatasett"><a class="anchor" href="#_testdatasett"></a>Testdatasett*</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dcatno:testdata a owl:ObjectProperty ;
+  rdfs:label “testdata”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range dcat:Dataset .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dekningsområde"><a class="anchor" href="#_dekningsområde"></a>Dekningsområde</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:spatial a owl:ObjectProperty ;
+            rdfs:label “dekningsområde”@no ; # norsk oversettelse
+            rdfs:domain dcat:Dataset ;
+            rdfs:range dct:Location .
+
+dct:Location a owl:Class ;                   #
+            rdfs:label “Lokasjon”@no .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tidsrom_tidsmessig_avgrensing"><a class="anchor" href="#_tidsrom_tidsmessig_avgrensing"></a>Tidsrom (Tidsmessig avgrensing)</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:temporal a owl:ObjectProperty ;
+            rdfs:domain dcat:Dataset ;
+            rdfs:range dct:PeriodOfTime ;
+            rdfs:label “tidsperiode”@no .
+
+dct:PeriodOfTime a owl:Class .
+
+ot:hasBeginning a owl:ObjectProperty ;
+    rdfs:domain dct:PeriodOfTime ;
+    rdfs:range ot:Instant.
+
+ot:hasEnd a owl:ObjectProperty ;
+    rdfs:domain dct:PeriodOfTime ;
+    rdfs:range ot:Instant.
+
+ot:Instant a owl:Class ;
+
+ot:inXSDDateTime a owl:DatatypeProperty ;
+    rdfs:domain ot:Instant ;
+    rdfs:range xsd:dateTime.</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_type"><a class="anchor" href="#_type"></a>Type</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:type a owl:ObjectProperty ;
+  rdfs:label “type”@no ;
+  rdfs:domain dcat:Dataset ;
+  rdfs:range skos:Concept . # refererer til EU publication office typer, se http://publications.europa.eu/mdr/authority/dataset-type/index.html + egendefinerte typer</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_endringsdato_modifisert"><a class="anchor" href="#_endringsdato_modifisert"></a>Endringsdato (modifisert)</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:modified a owl:DatatypeProperty ;
+     rdfs:domain dcat:Dataset ;
+     rdfs:range xsd:DateTime .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_skaper"><a class="anchor" href="#_skaper"></a>Skaper</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:creator a owl:DatatypeProperty ;
+     rdfs:label “Skaper”@ ;
+     rdfs:domain dcat:Dataset ;
+     rdfs:range rdfs:Literal .</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_distribusjon"><a class="anchor" href="#_distribusjon"></a>Distribusjon:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_tilgangsurl"><a class="anchor" href="#_tilgangsurl"></a>TilgangsURL</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dcat:accessURL a owl:ObjectProperty ;
+   rdfs:label “tilgangsURL”@no ;
+   rdfs:domain dcat:Distribution ;
+   rdfs:range rdfs:Resource .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beskrivelse_2"><a class="anchor" href="#_beskrivelse_2"></a>Beskrivelse</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:description a owl:DatatypeProperty ;
+   rdfs:label “tittel”@no ;
+   rdfs:domain dcat:Distribution ;
+   rdfs:range rdfs:Literal .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_format"><a class="anchor" href="#_format"></a>Format</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:format a owl:ObjectProperty ;
+   rdfs:label “format”@no ;
+   rdfs:domain dcat:Distribution ;
+   rdfs:range skos:Concept .</pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+Har range dct:MediaTypeOrExtent i dcat-ap-no
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dokumentasjon_2"><a class="anchor" href="#_dokumentasjon_2"></a>Dokumentasjon</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dcat:documentation a owl:ObjectProperty ;
+   rdfs:label “Dokumentasjon”@no ;
+   rdfs:domain dcat:Distribution ;
+   rdfs:range foaf:Document .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nedlastingslenke"><a class="anchor" href="#_nedlastingslenke"></a>Nedlastingslenke</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dcat:downloadURL a owl:ObjectProperty ;
+   rdfs:label “nedlastingslenke”@no ;
+   rdfs:domain dcat:Distribution ;
+   rdfs:range rdfs:Resource .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_i_samsvar_med_2"><a class="anchor" href="#_i_samsvar_med_2"></a>I samsvar med</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dcat:conformsTo a owl:ObjectProperty ;
+   rdfs:label “I samsvar med”@no ;
+   rdfs:domain dcat:Distribution ;
+   rdfs:range dct:Standard .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utgivelsesdato_utgivelse_2"><a class="anchor" href="#_utgivelsesdato_utgivelse_2"></a>Utgivelsesdato (Utgivelse)</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:issued a owl:ObjectProperty ;
+   rdfs:label “distribusjonsdato”@no ;
+   rdfs:domain dcat:Distribution ;
+   rdfs:range xsd:DateTime .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tittel_2"><a class="anchor" href="#_tittel_2"></a>Tittel</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:title a owl:DatatypeProperty ;
+            rdfs:label “tittel”@no ; # norsk oversettelse
+            rdfs:domain dcat:Catalog ;
+            rdfs:range rdfs:Literal .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_endringsdato_sist_oppdatert_2"><a class="anchor" href="#_endringsdato_sist_oppdatert_2"></a>Endringsdato (Sist oppdatert)</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:modified a owl:DatatypeProperty ;
+     rdfs:domain dcat:Distribution ;
+     rdfs:range xsd:DateTime .</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_enhet"><a class="anchor" href="#_enhet"></a>Enhet:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_navn_enhetsnavn"><a class="anchor" href="#_navn_enhetsnavn"></a>Navn (Enhetsnavn)</h3>
+<div class="listingblock">
+<div class="content">
+<pre>foaf:name a owl:DatatypeProperty ;
+  rdfs:label “enhetsnavn”@no ;
+  rdfs:domain foaf:Agent ;
+  rdfs:range rdfs:Literal .</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utgivertype"><a class="anchor" href="#_utgivertype"></a>Utgivertype</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:type a owl:ObjectProperty ;
+   rdfs:label “utgivertype”@no ;
+   rdfs:domain foaf:Agent ;
+   rdfs:range skos:Concept . # Refererer til institusjonellSektorkode fra Enhetsregisteret</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_organisasjonsidentifikator_organisasjonsnummer"><a class="anchor" href="#_organisasjonsidentifikator_organisasjonsnummer"></a>Organisasjonsidentifikator (Organisasjonsnummer)</h3>
+<div class="listingblock">
+<div class="content">
+<pre>dct:identifier a owl:DatatypeProperty ;
+  rdfs:label “organisasjonsnummer”@no ;
+  rdfs:domain foaf:Agent ;
+  rdfs:range rdfs:Literal .</pre>
+</div>
 </div>
 <!-- Google Analytics -->
 <script>
@@ -521,9 +1262,10 @@ ga('send', 'pageview');
 </div>
 </div>
 </div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2020-06-10 08:45:17 UTC
+Sist oppdatert 2020-06-10 12:50:36 UTC
 </div>
 </div>
 </body>
