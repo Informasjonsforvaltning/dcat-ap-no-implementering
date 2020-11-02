@@ -17,6 +17,8 @@ image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 //:sectnums:
 {description}
 
+IMPORTANT: Denne versjonen av veilederen var utarbeidet for https://data.norge.no/specification/dcat-ap-no/v1.1/[DCAT-AP-NO v.1.1] som er [yellow-background]#under utfasing#. Veilederen vil bli oppdatert for https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2.0].
+
 include::./shared/download.adoc[]
 
 // :leveloffset: +1
