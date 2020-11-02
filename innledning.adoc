@@ -1,5 +1,5 @@
 
-NOTE: Ikke alle egenskapene i standarden er beskrevet her. Titlene på feltene i dette dokumentet samsvarer med egenskapsnavnene i https://doc.difi.no/dcat-ap-no/[DCAT-AP-NO v1.1]. Titler i parentes er brukt i registreringsløsningen for https://fellesdatakatalog.brreg.no/[Felles datakatalog] . Felter i registreringsingsløsningen som ikke er del av standarden er merket med * .  Gapet mellom standard og løsning når det gjelder navngiving av felter er forventet løst i en snarlig revisjon av standarden.
+NOTE: Ikke alle egenskapene i standarden er beskrevet her. Titlene på feltene i dette dokumentet samsvarer med egenskapsnavnene i https://data.norge.no/specification/dcat-ap-no/v1.1/[DCAT-AP-NO v1.1]. Titler i parentes er brukt i registreringsløsningen for https://data.norge.no/[Felles datakatalog] . Felter i registreringsingsløsningen som ikke er del av standarden er merket med * .  Gapet mellom standard og løsning når det gjelder navngiving av felter er forventet løst i en snarlig revisjon av standarden.
 
 == Felter som er maskingenerert
 
