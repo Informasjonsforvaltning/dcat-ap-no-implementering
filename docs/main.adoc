@@ -1,7 +1,7 @@
 include::locale/attributes.adoc[]
-= Støtte til teknisk implementering av DCAT-AP-NO
+= Støtte til teknisk implementering av DCAT-AP-NO v.1.1
 v1.0
-:description: Normative beskrivelser av feltene i DCAT-AP-NO
+:description: Normative beskrivelser av feltene i DCAT-AP-NO v.1.1
 :doctype: book
 :docinfo:
 :icons: font
@@ -17,7 +17,8 @@ image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 //:sectnums:
 {description}
 
-IMPORTANT: Denne versjonen av veilederen var utarbeidet for https://data.norge.no/specification/dcat-ap-no/v1.1/[DCAT-AP-NO v.1.1] som er [yellow-background]#under utfasing#. Veilederen vil bli oppdatert for https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2.0].
+IMPORTANT: Denne veilederen var utarbeidet for https://data.norge.no/specification/dcat-ap-no/v1.1/[DCAT-AP-NO v.1.1] som er [yellow-background]#under utfasing#. Veilederen vil _ikke_ bli vedlikeholdt videre. +
+For https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2] vil det _ikke_ bli utarbeidet noen tilsvarende veileder til teknisk implementering. Det henvises til bl.a. https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl[shacl-reglene] som formelt og maskinprosesserbart beskriver klassene og egenskapene i DCAT-AP-NO.
 
 include::./shared/download.adoc[]
 
