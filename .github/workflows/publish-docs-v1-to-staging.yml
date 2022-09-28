@@ -38,8 +38,8 @@ jobs:
         with:
           ontology-type: "guide"
           ontology: "veileder-teknisk-implementering-dcat-ap-no"
-          host: "https://fellesdatakatalog.digdir.no"
-          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
+          host: "https://staging.fellesdatakatalog.digdir.no"
+          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY_STAGING }}
           files: |
             docs/index.html text/html nb
             docs/files/veileder-teknisk-implementering-dcat-ap-no.pdf application/pdf nb files/veileder-teknisk-implementering-dcat-ap-no.pdf
