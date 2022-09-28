@@ -1,25 +1,102 @@
 include::locale/attributes.adoc[]
-= Spesifikasjonsmal
-:description: Mal for bruk til nye spesifikasjoner som er laga i asciidoc.
+= Støtte til teknisk implementering av DCAT-AP-NO v.1.1
+v1.0
+:description: Normative beskrivelser av feltene i DCAT-AP-NO v.1.1
 :doctype: book
 :docinfo:
 :icons: font
 :toc: left
 :toclevels: 3
+:sectnumlevels: 4
 :sectanchors:
 :imagesdir: images
 :title-logo-image: image:digitaliseringsdirektoratet.png[pdfwidth=30vw]
 
 image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
-Publisert: 2020-03-05
+//:sectnums:
+{description}
 
-WARNING: Dette er mal-dokument for andre spesifikasjoner.
+IMPORTANT: Denne veilederen var utarbeidet for https://data.norge.no/specification/dcat-ap-no/v1.1/[DCAT-AP-NO v.1.1] som er [yellow-background]#under utfasing#. Veilederen vil _ikke_ bli vedlikeholdt videre. +
+For https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2] vil det _ikke_ bli utarbeidet noen tilsvarende veileder til teknisk implementering. Det henvises til bl.a. https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl[shacl-reglene] som formelt og maskinprosesserbart beskriver klassene og egenskapene i DCAT-AP-NO.
 
-include::shared/download.adoc[]
+include::./shared/download.adoc[]
 
-// Innhold her. Feks ei fil pr kapittel:
-include::forord.adoc[]
-include::kapittel_1.adoc[]
+// :leveloffset: +1
 
-include::shared/stats.adoc[]
+// Innhold her.
+include::innledning.adoc[]
+include::navnerom.adoc[]
+== Katalog:
+include::katalog/utgiver.adoc[]
+include::katalog/datasett.adoc[]
+include::katalog/utgivelsesdato.adoc[]
+include::katalog/endringsdato.adoc[]
+== Datasett:
+include::datasett/tittel.adoc[]
+include::datasett/beskrivelse.adoc[]
+include::datasett/identifikator.adoc[]
+include::datasett/tema.adoc[]
+include::datasett/utgiver.adoc[]
+include::datasett/kontaktpunkt.adoc[]
+include::datasett/datasettdistribusjon.adoc[]
+include::datasett/emneord.adoc[]
+include::datasett/tilgangsniva.adoc[]
+include::datasett/skjermingshjemmel.adoc[]
+include::datasett/begrep.adoc[]
+include::datasett/i-samsvar-med.adoc[]
+include::datasett/dokumentasjon.adoc[]
+include::datasett/frekvens.adoc[]
+// start dct-relasjoner
+// har versjon
+include::datasett/er-versjon-av.adoc[]
+include::datasett/er-del-av.adoc[]
+include::datasett/er-versjon-av.adoc[]
+include::datasett/erstattet-av.adoc[]
+include::datasett/krever.adoc[]
+include::datasett/relatert.adoc[]
+include::datasett/kilde.adoc[]
+include::datasett/opphav.adoc[]
+include::datasett/landingsside.adoc[]
+include::datasett/sprak.adoc[]
+// (utgivelsesdato)
+include::datasett/testdatasett.adoc[]
+include::datasett/dekningsomrade.adoc[]
+include::datasett/tidsrom.adoc[]
+include::datasett/type.adoc[]
+include::datasett/sist-endret.adoc[]
+// versjon
+// versjonsnote
+include::datasett/skaper.adoc[]
+// refererer til
+// er referert av
+// er del av
+// har del
+// er påkrevd av
+// erstatter
+
+== Distribusjon:
+
+include::distribusjon/tilgangsURL.adoc[]
+include::distribusjon/beskrivelse.adoc[]
+include::distribusjon/format.adoc[]
+//lisens
+//filstørrelse
+//sjekksum
+include::distribusjon/dokumentasjon.adoc[]
+include::distribusjon/nedlastningslenke.adoc[]
+//sprak
+include::distribusjon/i-samsvar-med.adoc[]
+include::distribusjon/utgivelsesdato.adoc[]
+//rettigheter
+//status
+include::distribusjon/tittel.adoc[]
+include::distribusjon/sist-oppdatert.adoc[]
+
+== Enhet:
+include::enhet/enhetsnavn.adoc[]
+include::enhet/utgivertype.adoc[]
+include::enhet/organisasjonsnummer.adoc[]
+
+
+include::./shared/stats.adoc[]
