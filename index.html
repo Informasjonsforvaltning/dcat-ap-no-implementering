@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.17">
+<meta name="generator" content="Asciidoctor 2.0.23">
 <meta name="description" content="Normative beskrivelser av feltene i DCAT-AP-NO v.1.1">
 <meta name="author" content="v1.0">
 <title>Støtte til teknisk implementering av DCAT-AP-NO v.1.1</title>
@@ -86,10 +86,10 @@ code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;
 ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
 ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
-ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
-ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -142,7 +142,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #content::before{content:none}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
 #header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
 #header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
@@ -164,6 +164,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toctitle{color:#7a2518;font-size:1.2em}
 @media screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
 #toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
@@ -210,13 +211,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -332,7 +330,7 @@ a.image{text-decoration:none;display:inline-block}
 a.image object{pointer-events:none}
 sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
 sup.footnote a,sup.footnoteref a{text-decoration:none}
-sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
 #footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
 #footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
@@ -395,7 +393,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -571,10 +569,10 @@ Ikke alle egenskapene i standarden er beskrevet her. Titlene på feltene i dette
 </div>
 </div>
 <div class="sect1">
-<h2 id="_felter_som_er_maskingenerert"><a class="anchor" href="#_felter_som_er_maskingenerert"></a>Felter som er maskingenerert</h2>
+<h2 id="_felter_som_er_maskingenerert"><a class="link" href="#_felter_som_er_maskingenerert">Felter som er maskingenerert</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_identifikator_for_datasett"><a class="anchor" href="#_identifikator_for_datasett"></a>Identifikator for datasett</h3>
+<h3 id="_identifikator_for_datasett"><a class="link" href="#_identifikator_for_datasett">Identifikator for datasett</a></h3>
 <div class="paragraph">
 <p>For å kunne referere til et datasett entydig og kunne angi relasjoner mellom datasett, må alle datasett ha stabile, globale og unike identifikatorer. Identifikator er et obligatorisk felt.</p>
 </div>
@@ -630,7 +628,7 @@ Ikke alle egenskapene i standarden er beskrevet her. Titlene på feltene i dette
 </div>
 </div>
 <div class="sect1">
-<h2 id="_navnerom"><a class="anchor" href="#_navnerom"></a>Navnerom</h2>
+<h2 id="_navnerom"><a class="link" href="#_navnerom">Navnerom</a></h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -648,10 +646,10 @@ Ikke alle egenskapene i standarden er beskrevet her. Titlene på feltene i dette
 </div>
 </div>
 <div class="sect1">
-<h2 id="_katalog"><a class="anchor" href="#_katalog"></a>Katalog:</h2>
+<h2 id="_katalog"><a class="link" href="#_katalog">Katalog:</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_utgiver_eier_av_katalog"><a class="anchor" href="#_utgiver_eier_av_katalog"></a>Utgiver (Eier av katalog)</h3>
+<h3 id="_utgiver_eier_av_katalog"><a class="link" href="#_utgiver_eier_av_katalog">Utgiver (Eier av katalog)</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:publisher a owl:ObjectProperty ;
@@ -661,7 +659,7 @@ Ikke alle egenskapene i standarden er beskrevet her. Titlene på feltene i dette
 </div>
 </div>
 <div class="sect2">
-<h3 id="_datasett"><a class="anchor" href="#_datasett"></a>Datasett</h3>
+<h3 id="_datasett"><a class="link" href="#_datasett">Datasett</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dcat:dataset a owl:ObjectProperty ;
@@ -672,7 +670,7 @@ Ikke alle egenskapene i standarden er beskrevet her. Titlene på feltene i dette
 </div>
 </div>
 <div class="sect2">
-<h3 id="_utgivelsesdato_utgivelse"><a class="anchor" href="#_utgivelsesdato_utgivelse"></a>Utgivelsesdato (Utgivelse)</h3>
+<h3 id="_utgivelsesdato_utgivelse"><a class="link" href="#_utgivelsesdato_utgivelse">Utgivelsesdato (Utgivelse)</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:issued a owl:ObjectProperty ;
@@ -683,7 +681,7 @@ Ikke alle egenskapene i standarden er beskrevet her. Titlene på feltene i dette
 </div>
 </div>
 <div class="sect2">
-<h3 id="_endringsdato_sist_oppdatert"><a class="anchor" href="#_endringsdato_sist_oppdatert"></a>Endringsdato (Sist oppdatert)</h3>
+<h3 id="_endringsdato_sist_oppdatert"><a class="link" href="#_endringsdato_sist_oppdatert">Endringsdato (Sist oppdatert)</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:modified a owl:DatatypeProperty ;
@@ -695,10 +693,10 @@ Ikke alle egenskapene i standarden er beskrevet her. Titlene på feltene i dette
 </div>
 </div>
 <div class="sect1">
-<h2 id="_datasett_2"><a class="anchor" href="#_datasett_2"></a>Datasett:</h2>
+<h2 id="_datasett_2"><a class="link" href="#_datasett_2">Datasett:</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_tittel"><a class="anchor" href="#_tittel"></a>Tittel</h3>
+<h3 id="_tittel"><a class="link" href="#_tittel">Tittel</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:title a owl:DatatypeProperty ;
@@ -709,7 +707,7 @@ Ikke alle egenskapene i standarden er beskrevet her. Titlene på feltene i dette
 </div>
 </div>
 <div class="sect2">
-<h3 id="_beskrivelse"><a class="anchor" href="#_beskrivelse"></a>Beskrivelse</h3>
+<h3 id="_beskrivelse"><a class="link" href="#_beskrivelse">Beskrivelse</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:description a owl:DatatypeProperty ;
@@ -720,7 +718,7 @@ Ikke alle egenskapene i standarden er beskrevet her. Titlene på feltene i dette
 </div>
 </div>
 <div class="sect2">
-<h3 id="_identifikator"><a class="anchor" href="#_identifikator"></a>Identifikator</h3>
+<h3 id="_identifikator"><a class="link" href="#_identifikator">Identifikator</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre># identifikatoren angis med dct:identifier som en streng
@@ -753,7 +751,7 @@ rdfs:seeAlso a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tema"><a class="anchor" href="#_tema"></a>Tema</h3>
+<h3 id="_tema"><a class="link" href="#_tema">Tema</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:subject a owl:ObjectProperty ;
@@ -764,7 +762,7 @@ rdfs:seeAlso a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_utgiver_eier"><a class="anchor" href="#_utgiver_eier"></a>Utgiver (Eier)</h3>
+<h3 id="_utgiver_eier"><a class="link" href="#_utgiver_eier">Utgiver (Eier)</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:publisher a owl:ObjectProperty ;
@@ -774,7 +772,7 @@ rdfs:seeAlso a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_kontaktpunkt"><a class="anchor" href="#_kontaktpunkt"></a>Kontaktpunkt</h3>
+<h3 id="_kontaktpunkt"><a class="link" href="#_kontaktpunkt">Kontaktpunkt</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dcat:contactPoint a owl:ObjectProperty ;
@@ -784,7 +782,7 @@ rdfs:seeAlso a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_datasettdistribusjon"><a class="anchor" href="#_datasettdistribusjon"></a>Datasettdistribusjon</h3>
+<h3 id="_datasettdistribusjon"><a class="link" href="#_datasettdistribusjon">Datasettdistribusjon</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dcat:distribution a owl:ObjectProperty ;
@@ -795,7 +793,7 @@ rdfs:seeAlso a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_emneord_søkeord"><a class="anchor" href="#_emneord_søkeord"></a>Emneord (Søkeord)</h3>
+<h3 id="_emneord_søkeord"><a class="link" href="#_emneord_søkeord">Emneord (Søkeord)</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dcat:keyword a owl:DatatypeProperty ;
@@ -805,7 +803,7 @@ rdfs:seeAlso a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tilgangsnivå"><a class="anchor" href="#_tilgangsnivå"></a>Tilgangsnivå</h3>
+<h3 id="_tilgangsnivå"><a class="link" href="#_tilgangsnivå">Tilgangsnivå</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:accessRights a owl:ObjectProperty ;
@@ -825,7 +823,7 @@ dct:RightsStatement a owl:Class . # Peker på eu publication office verdier http
 </div>
 </div>
 <div class="sect2">
-<h3 id="_skjermingshjemmel"><a class="anchor" href="#_skjermingshjemmel"></a>Skjermingshjemmel</h3>
+<h3 id="_skjermingshjemmel"><a class="link" href="#_skjermingshjemmel">Skjermingshjemmel</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dcatno:accessRightsComment a owl:DatatypeProperty;
@@ -835,7 +833,7 @@ dct:RightsStatement a owl:Class . # Peker på eu publication office verdier http
 </div>
 </div>
 <div class="sect2">
-<h3 id="_begrep"><a class="anchor" href="#_begrep"></a>Begrep</h3>
+<h3 id="_begrep"><a class="link" href="#_begrep">Begrep</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:subject a owl:ObjectProperty ;
@@ -846,7 +844,7 @@ dct:RightsStatement a owl:Class . # Peker på eu publication office verdier http
 </div>
 </div>
 <div class="sect2">
-<h3 id="_i_samsvar_med"><a class="anchor" href="#_i_samsvar_med"></a>I samsvar med</h3>
+<h3 id="_i_samsvar_med"><a class="link" href="#_i_samsvar_med">I samsvar med</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:conformsTo a owl:ObjectProperty;
@@ -857,7 +855,7 @@ dct:RightsStatement a owl:Class . # Peker på eu publication office verdier http
 </div>
 </div>
 <div class="sect2">
-<h3 id="_dokumentasjon"><a class="anchor" href="#_dokumentasjon"></a>Dokumentasjon</h3>
+<h3 id="_dokumentasjon"><a class="link" href="#_dokumentasjon">Dokumentasjon</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>foaf:page a owl:ObjectProperty ;
@@ -867,7 +865,7 @@ dct:RightsStatement a owl:Class . # Peker på eu publication office verdier http
 </div>
 </div>
 <div class="sect2">
-<h3 id="_frekvens"><a class="anchor" href="#_frekvens"></a>Frekvens</h3>
+<h3 id="_frekvens"><a class="link" href="#_frekvens">Frekvens</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:accrualPeriodicity a owl:ObjectProperty;
@@ -878,7 +876,7 @@ dct:RightsStatement a owl:Class . # Peker på eu publication office verdier http
 </div>
 </div>
 <div class="sect2">
-<h3 id="_er_versjon_av"><a class="anchor" href="#_er_versjon_av"></a>Er versjon av</h3>
+<h3 id="_er_versjon_av"><a class="link" href="#_er_versjon_av">Er versjon av</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:isVersionOf a owl:ObjectProperty ;
@@ -900,7 +898,7 @@ adms:versionNotes a owl:DatatypeProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_er_del_av"><a class="anchor" href="#_er_del_av"></a>Er del av</h3>
+<h3 id="_er_del_av"><a class="link" href="#_er_del_av">Er del av</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:isPartOf a owl:ObjectProperty ;
@@ -917,7 +915,7 @@ dcat:hasPart a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_er_versjon_av_2"><a class="anchor" href="#_er_versjon_av_2"></a>Er versjon av</h3>
+<h3 id="_er_versjon_av_2"><a class="link" href="#_er_versjon_av_2">Er versjon av</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:isVersionOf a owl:ObjectProperty ;
@@ -939,7 +937,7 @@ adms:versionNotes a owl:DatatypeProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_erstattet_av"><a class="anchor" href="#_erstattet_av"></a>Erstattet av</h3>
+<h3 id="_erstattet_av"><a class="link" href="#_erstattet_av">Erstattet av</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:isReplacedBy a owl:ObjectProperty ;
@@ -956,7 +954,7 @@ dcat:hasReplaced a owl:ObjectProperty;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_krever"><a class="anchor" href="#_krever"></a>Krever</h3>
+<h3 id="_krever"><a class="link" href="#_krever">Krever</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:requires a owl:ObjectProperty ;
@@ -973,7 +971,7 @@ dct:isRequiredBy a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_relatert"><a class="anchor" href="#_relatert"></a>Relatert</h3>
+<h3 id="_relatert"><a class="link" href="#_relatert">Relatert</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:relation a owl:ObjectProperty ;
@@ -984,7 +982,7 @@ dct:isRequiredBy a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_kilde"><a class="anchor" href="#_kilde"></a>Kilde</h3>
+<h3 id="_kilde"><a class="link" href="#_kilde">Kilde</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dcat:source a owl:ObjectProperty ;
@@ -995,7 +993,7 @@ dct:isRequiredBy a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_opphav"><a class="anchor" href="#_opphav"></a>Opphav</h3>
+<h3 id="_opphav"><a class="link" href="#_opphav">Opphav</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:provenance a owl:ObjectProperty;
@@ -1006,7 +1004,7 @@ dct:isRequiredBy a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_landingsside"><a class="anchor" href="#_landingsside"></a>Landingsside</h3>
+<h3 id="_landingsside"><a class="link" href="#_landingsside">Landingsside</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dcat:landingPage a owl:ObjectProperty ;
@@ -1016,7 +1014,7 @@ dct:isRequiredBy a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_språk"><a class="anchor" href="#_språk"></a>Språk</h3>
+<h3 id="_språk"><a class="link" href="#_språk">Språk</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:language a owl:ObjectProperty ;
@@ -1026,7 +1024,7 @@ dct:isRequiredBy a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_testdatasett"><a class="anchor" href="#_testdatasett"></a>Testdatasett*</h3>
+<h3 id="_testdatasett"><a class="link" href="#_testdatasett">Testdatasett*</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dcatno:testdata a owl:ObjectProperty ;
@@ -1037,7 +1035,7 @@ dct:isRequiredBy a owl:ObjectProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_dekningsområde"><a class="anchor" href="#_dekningsområde"></a>Dekningsområde</h3>
+<h3 id="_dekningsområde"><a class="link" href="#_dekningsområde">Dekningsområde</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:spatial a owl:ObjectProperty ;
@@ -1051,7 +1049,7 @@ dct:Location a owl:Class ;                   #
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tidsrom_tidsmessig_avgrensing"><a class="anchor" href="#_tidsrom_tidsmessig_avgrensing"></a>Tidsrom (Tidsmessig avgrensing)</h3>
+<h3 id="_tidsrom_tidsmessig_avgrensing"><a class="link" href="#_tidsrom_tidsmessig_avgrensing">Tidsrom (Tidsmessig avgrensing)</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:temporal a owl:ObjectProperty ;
@@ -1078,7 +1076,7 @@ ot:inXSDDateTime a owl:DatatypeProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_type"><a class="anchor" href="#_type"></a>Type</h3>
+<h3 id="_type"><a class="link" href="#_type">Type</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:type a owl:ObjectProperty ;
@@ -1089,7 +1087,7 @@ ot:inXSDDateTime a owl:DatatypeProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_endringsdato_modifisert"><a class="anchor" href="#_endringsdato_modifisert"></a>Endringsdato (modifisert)</h3>
+<h3 id="_endringsdato_modifisert"><a class="link" href="#_endringsdato_modifisert">Endringsdato (modifisert)</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:modified a owl:DatatypeProperty ;
@@ -1099,7 +1097,7 @@ ot:inXSDDateTime a owl:DatatypeProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_skaper"><a class="anchor" href="#_skaper"></a>Skaper</h3>
+<h3 id="_skaper"><a class="link" href="#_skaper">Skaper</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:creator a owl:DatatypeProperty ;
@@ -1112,10 +1110,10 @@ ot:inXSDDateTime a owl:DatatypeProperty ;
 </div>
 </div>
 <div class="sect1">
-<h2 id="_distribusjon"><a class="anchor" href="#_distribusjon"></a>Distribusjon:</h2>
+<h2 id="_distribusjon"><a class="link" href="#_distribusjon">Distribusjon:</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_tilgangsurl"><a class="anchor" href="#_tilgangsurl"></a>TilgangsURL</h3>
+<h3 id="_tilgangsurl"><a class="link" href="#_tilgangsurl">TilgangsURL</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dcat:accessURL a owl:ObjectProperty ;
@@ -1126,7 +1124,7 @@ ot:inXSDDateTime a owl:DatatypeProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_beskrivelse_2"><a class="anchor" href="#_beskrivelse_2"></a>Beskrivelse</h3>
+<h3 id="_beskrivelse_2"><a class="link" href="#_beskrivelse_2">Beskrivelse</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:description a owl:DatatypeProperty ;
@@ -1137,7 +1135,7 @@ ot:inXSDDateTime a owl:DatatypeProperty ;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_format"><a class="anchor" href="#_format"></a>Format</h3>
+<h3 id="_format"><a class="link" href="#_format">Format</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:format a owl:ObjectProperty ;
@@ -1160,7 +1158,7 @@ Har range dct:MediaTypeOrExtent i dcat-ap-no
 </div>
 </div>
 <div class="sect2">
-<h3 id="_dokumentasjon_2"><a class="anchor" href="#_dokumentasjon_2"></a>Dokumentasjon</h3>
+<h3 id="_dokumentasjon_2"><a class="link" href="#_dokumentasjon_2">Dokumentasjon</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dcat:documentation a owl:ObjectProperty ;
@@ -1171,7 +1169,7 @@ Har range dct:MediaTypeOrExtent i dcat-ap-no
 </div>
 </div>
 <div class="sect2">
-<h3 id="_nedlastingslenke"><a class="anchor" href="#_nedlastingslenke"></a>Nedlastingslenke</h3>
+<h3 id="_nedlastingslenke"><a class="link" href="#_nedlastingslenke">Nedlastingslenke</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dcat:downloadURL a owl:ObjectProperty ;
@@ -1182,7 +1180,7 @@ Har range dct:MediaTypeOrExtent i dcat-ap-no
 </div>
 </div>
 <div class="sect2">
-<h3 id="_i_samsvar_med_2"><a class="anchor" href="#_i_samsvar_med_2"></a>I samsvar med</h3>
+<h3 id="_i_samsvar_med_2"><a class="link" href="#_i_samsvar_med_2">I samsvar med</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dcat:conformsTo a owl:ObjectProperty ;
@@ -1193,7 +1191,7 @@ Har range dct:MediaTypeOrExtent i dcat-ap-no
 </div>
 </div>
 <div class="sect2">
-<h3 id="_utgivelsesdato_utgivelse_2"><a class="anchor" href="#_utgivelsesdato_utgivelse_2"></a>Utgivelsesdato (Utgivelse)</h3>
+<h3 id="_utgivelsesdato_utgivelse_2"><a class="link" href="#_utgivelsesdato_utgivelse_2">Utgivelsesdato (Utgivelse)</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:issued a owl:ObjectProperty ;
@@ -1204,7 +1202,7 @@ Har range dct:MediaTypeOrExtent i dcat-ap-no
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tittel_2"><a class="anchor" href="#_tittel_2"></a>Tittel</h3>
+<h3 id="_tittel_2"><a class="link" href="#_tittel_2">Tittel</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:title a owl:DatatypeProperty ;
@@ -1215,7 +1213,7 @@ Har range dct:MediaTypeOrExtent i dcat-ap-no
 </div>
 </div>
 <div class="sect2">
-<h3 id="_endringsdato_sist_oppdatert_2"><a class="anchor" href="#_endringsdato_sist_oppdatert_2"></a>Endringsdato (Sist oppdatert)</h3>
+<h3 id="_endringsdato_sist_oppdatert_2"><a class="link" href="#_endringsdato_sist_oppdatert_2">Endringsdato (Sist oppdatert)</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:modified a owl:DatatypeProperty ;
@@ -1227,10 +1225,10 @@ Har range dct:MediaTypeOrExtent i dcat-ap-no
 </div>
 </div>
 <div class="sect1">
-<h2 id="_enhet"><a class="anchor" href="#_enhet"></a>Enhet:</h2>
+<h2 id="_enhet"><a class="link" href="#_enhet">Enhet:</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_navn_enhetsnavn"><a class="anchor" href="#_navn_enhetsnavn"></a>Navn (Enhetsnavn)</h3>
+<h3 id="_navn_enhetsnavn"><a class="link" href="#_navn_enhetsnavn">Navn (Enhetsnavn)</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>foaf:name a owl:DatatypeProperty ;
@@ -1241,7 +1239,7 @@ Har range dct:MediaTypeOrExtent i dcat-ap-no
 </div>
 </div>
 <div class="sect2">
-<h3 id="_utgivertype"><a class="anchor" href="#_utgivertype"></a>Utgivertype</h3>
+<h3 id="_utgivertype"><a class="link" href="#_utgivertype">Utgivertype</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:type a owl:ObjectProperty ;
@@ -1252,7 +1250,7 @@ Har range dct:MediaTypeOrExtent i dcat-ap-no
 </div>
 </div>
 <div class="sect2">
-<h3 id="_organisasjonsidentifikator_organisasjonsnummer"><a class="anchor" href="#_organisasjonsidentifikator_organisasjonsnummer"></a>Organisasjonsidentifikator (Organisasjonsnummer)</h3>
+<h3 id="_organisasjonsidentifikator_organisasjonsnummer"><a class="link" href="#_organisasjonsidentifikator_organisasjonsnummer">Organisasjonsidentifikator (Organisasjonsnummer)</a></h3>
 <div class="listingblock">
 <div class="content">
 <pre>dct:identifier a owl:DatatypeProperty ;
@@ -1278,7 +1276,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2022-09-28 10:41:07 UTC
+Sist oppdatert 2024-08-08 13:42:35 UTC
 </div>
 </div>
 </body>
