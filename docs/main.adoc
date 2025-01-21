@@ -17,10 +17,17 @@ image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 //:sectnums:
 {description}
 
-IMPORTANT: Denne veilederen var utarbeidet for https://data.norge.no/specification/dcat-ap-no/v1.1/[DCAT-AP-NO v.1.1] som er [yellow-background]#under utfasing#. Veilederen vil _ikke_ bli vedlikeholdt videre. +
-For https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2] vil det _ikke_ bli utarbeidet noen tilsvarende veileder til teknisk implementering. Det henvises til bl.a. https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl[shacl-reglene] som formelt og maskinprosesserbart beskriver klassene og egenskapene i DCAT-AP-NO.
+// markere denne som "utgått" med fixed textbox her kodet direkte i html
+++++
+<div style="position: fixed; top: 40%; left: 50%; transform: translateX(-50%); background-color: #ffffff; border: 1px solid black; padding: 15px; box-shadow: 15px 15px 15px red; opacity: 0.85">
+  <p> <b>NB! Denne spesifikasjonen er utgått og vil ikke bli vedlikeholdt (inkl. ev. kjente feil/mangler). Den var ment for DCAT-AP-NO v.1 som var utgått. For <a href=https://data.norge.no/specification/dcat-ap-no>DCAT-AP-NO v2+</a> er det valgt å ikke utarbeide noen tilsvarende veileder til teknisk implementering. Se bl.a. <a href=https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl>shacl-reglene</a> som formelt og maskinprosesserbart beskriver klassene og egenskapene i DCAT-AP-NO.</b></p>
+</div>
+++++
 
-include::./shared/download.adoc[]
+// IMPORTANT: Denne veilederen var utarbeidet for https://data.norge.no/specification/dcat-ap-no/v1.1/[DCAT-AP-NO v.1.1] som er [yellow-background]#under utfasing#. Veilederen vil _ikke_ bli vedlikeholdt videre. +
+// For https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2] vil det _ikke_ bli utarbeidet noen tilsvarende veileder til teknisk implementering. Det henvises til bl.a. https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl[shacl-reglene] som formelt og maskinprosesserbart beskriver klassene og egenskapene i DCAT-AP-NO.
+
+// include::./shared/download.adoc[]
 
 // :leveloffset: +1
 
