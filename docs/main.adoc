@@ -20,7 +20,7 @@ image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 // markere denne som "utgått" med fixed textbox her kodet direkte i html
 ++++
 <div style="position: fixed; top: 40%; left: 50%; transform: translateX(-50%); background-color: #ffffff; border: 1px solid black; padding: 15px; box-shadow: 15px 15px 15px red; opacity: 0.85">
-  <p> <b>NB! Denne spesifikasjonen er utgått og vil ikke bli vedlikeholdt (inkl. ev. kjente feil/mangler). Den var ment for DCAT-AP-NO v.1 som var utgått. For <a href=https://data.norge.no/specification/dcat-ap-no>DCAT-AP-NO v2+</a> er det valgt å ikke utarbeide noen tilsvarende veileder til teknisk implementering. Se bl.a. <a href=https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl>shacl-reglene</a> som formelt og maskinprosesserbart beskriver klassene og egenskapene i DCAT-AP-NO.</b></p>
+  <p> <strong>NB! Denne spesifikasjonen er utgått og vil ikke bli vedlikeholdt (inkl. ev. kjente feil/mangler). Den var ment for DCAT-AP-NO v.1 som var utgått. For <a href=https://data.norge.no/specification/dcat-ap-no>DCAT-AP-NO v2+</a> er det valgt å ikke utarbeide noen tilsvarende veileder til teknisk implementering. Se bl.a. <a href=https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl>shacl-reglene</a> som formelt og maskinprosesserbart beskriver klassene og egenskapene i DCAT-AP-NO.</strong></p>
 </div>
 ++++
 
