@@ -24,13 +24,6 @@ image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 </div>
 ++++
 
-// IMPORTANT: Denne veilederen var utarbeidet for https://data.norge.no/specification/dcat-ap-no/v1.1/[DCAT-AP-NO v.1.1] som er [yellow-background]#under utfasing#. Veilederen vil _ikke_ bli vedlikeholdt videre. +
-// For https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2] vil det _ikke_ bli utarbeidet noen tilsvarende veileder til teknisk implementering. Det henvises til bl.a. https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl[shacl-reglene] som formelt og maskinprosesserbart beskriver klassene og egenskapene i DCAT-AP-NO.
-
-// include::./shared/download.adoc[]
-
-// :leveloffset: +1
-
 // Innhold her.
 include::innledning.adoc[]
 include::navnerom.adoc[]
