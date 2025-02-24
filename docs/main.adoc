@@ -99,4 +99,4 @@ include::enhet/utgivertype.adoc[]
 include::enhet/organisasjonsnummer.adoc[]
 
 
-// include::./shared/stats.adoc[]
+include::./shared/analytics.adoc[]
