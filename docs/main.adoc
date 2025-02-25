@@ -98,5 +98,5 @@ include::enhet/enhetsnavn.adoc[]
 include::enhet/utgivertype.adoc[]
 include::enhet/organisasjonsnummer.adoc[]
 
-
+// Analytics
 include::./shared/analytics.adoc[]
